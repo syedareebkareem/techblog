@@ -26,13 +26,13 @@ export default function AdminCommentsPage() {
         .select(
           `
           id, post_id, content, created_at, author_id,
-          posts (title, slug),
+          post:posts (title, slug),
           user_profiles (full_name, avatar_url)
         `,
         )
         .order("created_at", { ascending: false });
 
-      setComments(data as Comment[]);
+      setComments(data as unknown as Comment[]);
       setLoading(false);
     }
     load();
