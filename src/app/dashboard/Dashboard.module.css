@@ -1,0 +1,225 @@
+/* src/app/dashboard/Dashboard.module.css */
+
+:root {
+  --c-slate-900: #0F172A;
+  --c-slate-800: #1E293B;
+  --c-slate-600: #475569;
+  --c-slate-500: #64748B;
+  --c-slate-200: #E2E8F0;
+  --c-slate-50: #F8FAFC;
+  --c-emerald-600: #059669;
+  --c-emerald-500: #10B981;
+  --c-white: #FFFFFF;
+  --c-red-500: #EF4444;
+}
+
+.pageWrapper {
+  background-color: var(--c-slate-50);
+  min-height: calc(100vh - 4rem);
+  /* Accounts for navbar */
+  padding: 3rem 1.5rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 16rem 1fr;
+  }
+}
+
+/* --- Sidebar --- */
+.sidebar {
+  background-color: var(--c-white);
+  border: 1px solid var(--c-slate-200);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  height: fit-content;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--c-slate-200);
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--c-emerald-600);
+  color: var(--c-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.userEmail {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--c-slate-900);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.userRole {
+  font-size: 0.75rem;
+  color: var(--c-emerald-600);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navItem {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--c-slate-600);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.navItem:hover {
+  background-color: var(--c-slate-50);
+  color: var(--c-slate-900);
+}
+
+.navItemActive {
+  background-color: var(--c-slate-900);
+  color: var(--c-white);
+}
+
+.navItemActive:hover {
+  background-color: var(--c-slate-800);
+  color: var(--c-white);
+}
+
+/* --- Main Content Panel --- */
+.contentPanel {
+  background-color: var(--c-white);
+  border: 1px solid var(--c-slate-200);
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+}
+
+.panelHeader {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--c-slate-200);
+  padding-bottom: 1rem;
+}
+
+.panelTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--c-slate-900);
+  margin: 0 0 0.5rem 0;
+}
+
+.panelDesc {
+  font-size: 0.875rem;
+  color: var(--c-slate-500);
+  margin: 0;
+}
+
+/* Empty States & Cards */
+.emptyState {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: var(--c-slate-50);
+  border-radius: 0.5rem;
+  border: 1px dashed var(--c-slate-300);
+}
+
+.emptyStateTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--c-slate-900);
+  margin: 0 0 0.5rem 0;
+}
+
+.emptyStateDesc {
+  font-size: 0.875rem;
+  color: var(--c-slate-500);
+  margin: 0;
+}
+
+/* Danger Zone */
+.dangerZone {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #FCA5A5;
+  border-radius: 0.5rem;
+  background-color: #FEF2F2;
+}
+
+.dangerTitle {
+  color: var(--c-red-500);
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.dangerDesc {
+  color: var(--c-slate-600);
+  font-size: 0.875rem;
+  margin: 0 0 1rem 0;
+}
+
+.logoutBtn {
+  background-color: var(--c-red-500);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
+
+.logoutBtn:hover {
+  background-color: #DC2626;
+}
+
+/* Loading State */
+.loadingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--c-slate-500);
+}

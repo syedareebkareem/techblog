@@ -1,0 +1,174 @@
+/* src/app/admin/AdminLayout.module.css */
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  font-family: system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+  transition: var(--transition-theme);
+}
+
+.container * {
+  box-sizing: border-box;
+}
+
+/* SIDEBAR: Clean Elevated Card */
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-card);
+  border-right: 1px solid var(--border-main);
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  z-index: 50;
+  transition: var(--transition-theme);
+}
+
+.logoArea {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-main);
+}
+
+.logoIcon {
+  width: 32px;
+  height: 32px;
+  background-color: var(--brand-green);
+  color: #FFFFFF;
+  /* Keep inner icon text strictly white */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  font-weight: 900;
+}
+
+.nav {
+  flex: 1;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.navItem:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* ACTIVE STATE: Emerald Accent */
+.navItemActive {
+  background-color: var(--bg-hover);
+  color: var(--brand-green);
+  font-weight: 700;
+  border-right: 3px solid var(--brand-green);
+}
+
+.navItemActive:hover {
+  background-color: var(--bg-hover);
+  color: var(--brand-green);
+}
+
+.icon {
+  width: 20px !important;
+  height: 20px !important;
+  flex-shrink: 0;
+}
+
+.userInfo {
+  padding: 20px;
+  border-top: 1px solid var(--border-main);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--brand-green);
+  color: #FFFFFF;
+  /* Keep avatar text white */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* MAIN CONTENT AREA */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* TOPBAR: Elevated White Card */
+.topbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Changed to space-between to accommodate toggle button */
+  padding: 0 32px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-main);
+  border-radius: 16px;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-theme);
+}
+
+.themeBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.themeBtn:hover {
+  background: var(--bg-hover);
+  color: var(--brand-green);
+}
+
+.pageContent {
+  flex: 1;
+  overflow-y: auto;
+}
