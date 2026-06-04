@@ -43,13 +43,13 @@ export const LineHeight = Extension.create({
 
   addCommands() {
     return {
-      setLineHeight: (lineHeight: string) => ({ commands }) => {
-        // FIXED: Using .some() instead of .every() so it doesn't panic
-        return this.options.types.some(type => commands.updateAttributes(type, { lineHeight }));
-      },
-      unsetLineHeight: () => ({ commands }) => {
-        return this.options.types.some(type => commands.resetAttributes(type, 'lineHeight'));
-      },
+setLineHeight: (lineHeight: string) => ({ commands }) => {
+          // FIXED: Using .some() instead of .every() so it doesn't panic
+          return this.options.types.some((type: string) => commands.updateAttributes(type, { lineHeight }));
+        },
+        unsetLineHeight: () => ({ commands }) => {
+          return this.options.types.some((type: string) => commands.resetAttributes(type, 'lineHeight'));
+        },
     };
   },
 });
