@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://techblog-rhbfwfncf-syed-areeb-kareem-s-projects.vercel.app/";
   const postUrl = `${siteUrl}/post/${slug}`;
   const imageUrl = post.cover_image || `${siteUrl}/og-default.png`;
 

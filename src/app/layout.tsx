@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 // We added advanced, dynamic fallback metadata here!
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+    process.env.NEXT_PUBLIC_SITE_URL || "https://techblog-rhbfwfncf-syed-areeb-kareem-s-projects.vercel.app/",
   ),
   title: {
     default: "IndustrialBlog | Engineering the Future",
